@@ -19,27 +19,27 @@ const init: Brand[] = [
   {
     position: 1,
     name: 'Facebook',
-    logoUrl: '/facebook.jpg',
+    logoUrl: 'https://higherkingpud.github.io/sortable-grid-table/facebook.jpg',
   },
   {
     position: 2,
     name: 'Instagram',
-    logoUrl: '/instagram.jpeg'
+    logoUrl: 'https://higherkingpud.github.io/sortable-grid-table/instagram.jpeg'
   },
   {
     position: 3,
     name: 'Tiktok',
-    logoUrl: '/tiktok.jpeg',
+    logoUrl: 'https://higherkingpud.github.io/sortable-grid-table/tiktok.jpeg',
   },
   {
     position: 4,
     name: 'Twitter',
-    logoUrl: '/twitter.jpeg'
+    logoUrl: 'https://higherkingpud.github.io/sortable-grid-table/twitter.jpeg'
   },
   {
     position: 5,
     name: 'ZOOM',
-    logoUrl: '/zoom.png'
+    logoUrl: 'https://higherkingpud.github.io/sortable-grid-table/zoom.png'
   }
 ]
 
