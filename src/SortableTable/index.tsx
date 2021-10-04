@@ -66,6 +66,7 @@ export default function SortableTable({
         }}
         verticalAlign="bottom"
         width="100%"
+        onDrop={(e) => { e.preventDefault(); }}
       >
         {children}
       </Grid>
@@ -119,7 +120,9 @@ export const SortableRow: ChakraComponent<'div', { index: number }> = ({
       transform={transform}
       transition=".2s"
       draggable
-      onDragEnd={() => {
+      visibility={dragging === index ? 'hidden' : 'visible'}
+      onDragEnd={(e) => {
+        e.preventDefault();
         onDrop?.(dragging, crossing);
         setDragging?.(undefined);
         setCrossing?.(undefined);
@@ -136,12 +139,11 @@ export const SortableRow: ChakraComponent<'div', { index: number }> = ({
           dragging > index ? `translateY(${rowspan})` : `translateY(-${rowspan})`
         );
       }}
-      onDragOver={(e) => {
-        e.preventDefault();
-      }}
+      onDragOver={(e) => { e.preventDefault(); }}
       onDragStart={() => {
         setDragging?.(index);
       }}
+      onDrop={(e) => { e.preventDefault(); }}
       {...props}
     />
   );
